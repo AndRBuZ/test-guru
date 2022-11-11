@@ -22,17 +22,32 @@ tests = Test.create!(
 questions = Question.create!(
   [
     { text: 'Who is the creator?', test_id: tests[0].id },
-    { text: 'What are the ruby libraries called?', test_id: tests[1].id },
+    { text: 'Framework name for Ruby?', test_id: tests[1].id },
     { text: 'List connection type?', test_id: tests[2].id },
-    { text: 'Who is the developer?', test_id: tests[3].id }
+    { text: 'Maximum table size?', test_id: tests[3].id }
   ]
 )
 
 answers = Answer.create!(
   [
-    { text: 'Yukihiro Matsumoto', question_id: questions[0].id },
-    { text: 'Gems', question_id: questions[1].id },
-    { text: 'Inner, Left, Right, Full', question_id: questions[2].id },
-    { text: 'PostgreSQL Global Development Group', question_id: questions[3].id }
+    { text: 'Yukihiro Matsumoto', correct: true, question_id: questions[0].id },
+    { text: 'Guido van Rossum', question_id: questions[0].id },
+    { text: 'Bjarne Stroustrup', question_id: questions[0].id },
+    { text: 'Django', question_id: questions[1].id },
+    { text: 'Gems', correct: true, question_id: questions[1].id },
+    { text: 'React', question_id: questions[1].id },
+    { text: 'Inner, Left, Right, Full', correct: true, question_id: questions[2].id },
+    { text: 'Inner, Full', question_id: questions[2].id },
+    { text: 'Left, Right', question_id: questions[2].id},
+    { text: '32TB', correct: true, question_id: questions[3].id },
+    { text: '16TB', correct: true, question_id: questions[3].id },
+    { text: '24TB', correct: true, question_id: questions[3].id }
+  ]
+)
+
+user_tests = UserTest.create!(
+  [
+    { user_id: users[2].id, test_id: tests[1].id },
+    { user_id: users[2].id, test_id: tests[2].id }
   ]
 )
