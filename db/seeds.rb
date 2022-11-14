@@ -12,42 +12,42 @@ categories = Category.create!([{ title: 'Programming languages' }, { title: 'Dat
 
 tests = Test.create!(
   [
-    { title: 'Ruby', level: 0, category_id: categories[0].id, author_id: users[0].id },
-    { title: 'Ruby', level: 1, category_id: categories[0].id, author_id: users[0].id },
-    { title: 'MySQL', level: 2, category_id: categories[1].id, author_id: users[1].id },
-    { title: 'PostgreSQL', level: 0, category_id: categories[1].id, author_id: users[1].id }
+    { title: 'Ruby', level: 0, category: categories[0], author: users[0] },
+    { title: 'Ruby', level: 1, category: categories[0], author: users[0] },
+    { title: 'MySQL', level: 2, category: categories[1], author: users[1] },
+    { title: 'PostgreSQL', level: 0, category: categories[1], author: users[1] }
   ]
 )
 
 questions = Question.create!(
   [
-    { text: 'Who is the creator?', test_id: tests[0].id },
-    { text: 'Framework name for Ruby?', test_id: tests[1].id },
-    { text: 'List connection type?', test_id: tests[2].id },
-    { text: 'Maximum table size?', test_id: tests[3].id }
+    { text: 'Who is the creator?', test: tests[0] },
+    { text: 'Framework name for Ruby?', test: tests[1] },
+    { text: 'List connection type?', test: tests[2] },
+    { text: 'Maximum table size?', test: tests[3] }
   ]
 )
 
 answers = Answer.create!(
   [
-    { text: 'Yukihiro Matsumoto', correct: true, question_id: questions[0].id },
-    { text: 'Guido van Rossum', question_id: questions[0].id },
-    { text: 'Bjarne Stroustrup', question_id: questions[0].id },
-    { text: 'Django', question_id: questions[1].id },
-    { text: 'Gems', correct: true, question_id: questions[1].id },
-    { text: 'React', question_id: questions[1].id },
-    { text: 'Inner, Left, Right, Full', correct: true, question_id: questions[2].id },
-    { text: 'Inner, Full', question_id: questions[2].id },
-    { text: 'Left, Right', question_id: questions[2].id},
-    { text: '32TB', correct: true, question_id: questions[3].id },
-    { text: '16TB', correct: true, question_id: questions[3].id },
-    { text: '24TB', correct: true, question_id: questions[3].id }
+    { text: 'Yukihiro Matsumoto', correct: true, question: questions[0] },
+    { text: 'Guido van Rossum', question: questions[0] },
+    { text: 'Bjarne Stroustrup', question: questions[0] },
+    { text: 'Django', question: questions[1] },
+    { text: 'Gems', correct: true, question: questions[1] },
+    { text: 'React', question: questions[1] },
+    { text: 'Inner, Left, Right, Full', correct: true, question: questions[2] },
+    { text: 'Inner, Full', question: questions[2] },
+    { text: 'Left, Right', question: questions[2] },
+    { text: '32TB', correct: true, question: questions[3] },
+    { text: '16TB', correct: true, question: questions[3] },
+    { text: '24TB', correct: true, question: questions[3] }
   ]
 )
 
 user_tests = UserTest.create!(
   [
-    { user_id: users[2].id, test_id: tests[1].id },
-    { user_id: users[2].id, test_id: tests[2].id }
+    { user: users[2], test: tests[1] },
+    { user: users[2], test: tests[2] }
   ]
 )
