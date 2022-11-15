@@ -4,7 +4,7 @@ class Answer < ApplicationRecord
   validates :text, presence: true
   validate :validate_answers_limit
 
-  scope :true_answer, -> { where(correct: true) }
+  scope :correct, -> { where(correct: true) }
 
   private
 
