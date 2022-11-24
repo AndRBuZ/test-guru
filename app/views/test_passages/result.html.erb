@@ -1,0 +1,6 @@
+<h1>The <%= @test_passage.test.title %> test was complited!</h1>
+
+<p>
+  <span class=<%= @test_passage.succeeded? ? 'green' : 'red' %>>
+  <span><%= @test_passage.succeeded? ? 'Test passed' : 'Test failed' %> with <%= @test_passage.correct_percent %>% correct answers</span>
+</p>
