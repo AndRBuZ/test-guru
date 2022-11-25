@@ -2,7 +2,7 @@ class Answer < ApplicationRecord
   belongs_to :question
 
   validates :text, presence: true
-  validate :validate_answers_limit
+  validate :validate_answers_limit, on: :create
 
   scope :correct, -> { where(correct: true) }
 

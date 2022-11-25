@@ -28,6 +28,9 @@ tests = Test.create!(
 questions = Question.create!(
   [
     { text: 'Who is the creator?', test: tests[0] },
+    { text: 'Question 2', test: tests[0] },
+    { text: 'Question 3', test: tests[0] },
+    { text: 'Question 4', test: tests[0] },
     { text: 'Framework name for Ruby?', test: tests[1] },
     { text: 'List connection type?', test: tests[2] },
     { text: 'Maximum table size?', test: tests[3] }
@@ -39,19 +42,28 @@ answers = Answer.create!(
     { text: 'Yukihiro Matsumoto', correct: true, question: questions[0] },
     { text: 'Guido van Rossum', question: questions[0] },
     { text: 'Bjarne Stroustrup', question: questions[0] },
-    { text: 'Django', question: questions[1] },
-    { text: 'Gems', correct: true, question: questions[1] },
-    { text: 'React', question: questions[1] },
-    { text: 'Inner, Left, Right, Full', correct: true, question: questions[2] },
-    { text: 'Inner, Full', question: questions[2] },
-    { text: 'Left, Right', question: questions[2] },
-    { text: '32TB', correct: true, question: questions[3] },
-    { text: '16TB', correct: true, question: questions[3] },
-    { text: '24TB', correct: true, question: questions[3] }
+    { text: 'Answer 1', correct: true, question: questions[1] },
+    { text: 'Answer 2', question: questions[1] },
+    { text: 'Answer 3', question: questions[1] },
+    { text: 'Answer 1', question: questions[2] },
+    { text: 'Answer 2', correct: true, question: questions[2] },
+    { text: 'Answer 3', question: questions[2] },
+    { text: 'Answer 1', question: questions[3] },
+    { text: 'Answer 2', question: questions[3] },
+    { text: 'Answer 3', correct: true, question: questions[3] },
+    { text: 'Django', question: questions[4] },
+    { text: 'Rails', correct: true, question: questions[4] },
+    { text: 'React', question: questions[4] },
+    { text: 'Inner, Left, Right, Full', correct: true, question: questions[5] },
+    { text: 'Inner, Full', question: questions[5] },
+    { text: 'Left, Right', question: questions[5] },
+    { text: '32TB', correct: true, question: questions[6] },
+    { text: '16TB', correct: true, question: questions[6] },
+    { text: '24TB', correct: true, question: questions[6] }
   ]
 )
 
-user_tests = UserTest.create!(
+test_passages = TestPassage.create!(
   [
     { user: users[2], test: tests[1] },
     { user: users[2], test: tests[2] }
