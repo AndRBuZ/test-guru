@@ -1,3 +1,14 @@
 <header>
-  <p><%= link_to 'Tests', tests_path %></p>
+  <h1><%= link_to 'TestGuru', tests_path %></h1>
+  <% if logged_in? %>
+    <p>Welcome, <%=current_user.name %> Guru</p>
+    <p><%= link_to 'Logout', logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <% end %>
+
+  <% if !logged_in? %>
+    <p>
+      <%= link_to 'Registration', signup_path %>
+      <%= link_to 'Login', login_path %>
+    </p>
+  <% end %>
 </header>
