@@ -1,7 +1,7 @@
 body {
   background-color: #fff;
   color: #333;
-  margin: 33px; }
+  margin: 0px; }
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -60,3 +60,39 @@ div.actions {
 #error_explanation ul li {
   font-size: 12px;
   list-style: square; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+}
+
+header {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+
+  a {
+    color: white;
+  }
+}
