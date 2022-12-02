@@ -1,14 +1,14 @@
 <header>
   <ul>
     <li><a><%= link_to 'TestGuru', tests_path %></a></li>
-      <% if logged_in? %>
-        <li style="float:right"><a><%= link_to 'Logout', logout_path, method: :delete, data: { confirm: 'Are you sure?' } %></a></li>
+      <% if user_signed_in? %>
+        <li style="float:right"><a><%= link_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %></a></li>
         <a style="float:right">Welcome, <%= current_user.name %> Guru</a>
       <% end %>
 
-      <% if !logged_in? %>
-        <li style="float:right"><a><%= link_to 'Registration', signup_path %></a></li>
-        <li style="float:right"><a><%= link_to 'Login', login_path %></a></li>
+      <% if !user_signed_in? %>
+        <li style="float:right"><a><%= link_to 'Registration', new_user_registration_path %></a></li>
+        <li style="float:right"><a><%= link_to 'Login', new_user_session_path %></a></li>
       </p>
     <% end %>
   </ul>
