@@ -31,3 +31,60 @@
 
 en:
   hello: "Hello world"
+
+  Show: "Show"
+  Edit: "Edit"
+  Delete: "Delete"
+  Back: "Back"
+
+  helpers:
+    select:
+      prompt: "Please select"
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: "Tests"
+      title: "Title"
+      level: "Level"
+      number_of_questions: "Number of questions"
+      actions: "Actions"
+    test:
+      Start: "Start"
+
+  admin:
+    tests:
+      create:
+        success: "Test was successfully created."
+      index:
+        header: "Tests"
+        title: "Title"
+        level: "Level"
+        number_of_questions: "Number of questions"
+        actions: "Actions"
+        new: "New test"
+      show:
+        header: "Test %{title}"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        new_question: "New question"
+        actions: "Actions"
+      new:
+        header: "Create new test" 
+      edit:
+        header: "Edit %{title} test"
