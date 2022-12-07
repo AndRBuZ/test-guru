@@ -1,4 +1,4 @@
-<h1>Edit <%= @test.title %> test</h1>
+<h1><%= t('.header', title: @test.title) %></h1>
 
 <p><%= render 'form' %></p>
-<%= link_to 'Back', admin_test_path %>
+<%= link_to t('Back'), admin_test_path %>

@@ -1,0 +1,61 @@
+ru:
+  hello: "Привет мир"
+  
+  Show: "Смотреть"
+  Edit: "Изменить"
+  Delete: "Удалить"
+  Back: "Назад"
+
+  helpers:
+    select:
+      prompt: "Пожалуйста, выберите"
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружено %{count} ошибки"
+
+  tests:
+    index:
+      header: "Тесты"
+      title: "Название"
+      level: "Уровень"
+      number_of_questions: "Количество вопросов"
+      actions: "Действия"
+    test:
+      Start: "Начать"
+
+  admin:
+    tests:
+      create:
+        success: "Тест был успешно создан."
+      index:
+        header: "Тесты"
+        title: "Название"
+        level: "Уровень"
+        number_of_questions: "Количество вопросов"
+        actions: "Действия"
+        new: "Новый тест"
+      show:
+        header: "Тест %{title}"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        new_question: "Новый вопрос"
+        actions: "Действия"
+      new:
+        header: "Создание нового теста"
+      edit:
+        header: "Изменить %{title} тест"      
