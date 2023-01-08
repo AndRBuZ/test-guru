@@ -2,8 +2,10 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :set_locale
 
-  def after_sign_in_path_for(resource)
-    if resource.is_a?(Admin)
+  helper_method :admin?
+
+  def after_sign_in_path_for(resoures)
+    if resoures.is_a?(Admin)
       admin_tests_path
     else
       root_path
@@ -22,5 +24,9 @@ class ApplicationController < ActionController::Base
 
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+  end
+
+  def admin?
+    current_user.is_a?(Admin)
   end
 end

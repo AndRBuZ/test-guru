@@ -1,0 +1,17 @@
+<nav class="navbar navbar-light bg-light">
+  <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
+  <span class="navbar-text">
+    <% if user_signed_in? %>
+      <% if admin? %>
+        <button type="button" class="btn btn-outline-primary">
+          <%= link_to 'AdminPanel', admin_tests_path %>
+        </button>
+      <% end %>
+      Welcome, <%= current_user.name %> Guru |
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% else %>
+      <%= link_to "Log in", new_user_session_path %> |
+      <%= link_to "Sign in", new_user_registration_path %>
+    <% end %>
+  </span>
+</nav>
