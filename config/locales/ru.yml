@@ -37,6 +37,11 @@ ru:
     test:
       Start: "Начать"
 
+  test_passages:
+    gist:
+      success: "Gist успешно сохранен"
+      failure: "Во время сохранения gist произошла ошибка"
+
   admin:
     tests:
       create:
@@ -58,4 +63,7 @@ ru:
       new:
         header: "Создание нового теста"
       edit:
-        header: "Изменить %{title} тест"      
+        header: "Изменить %{title} тест"
+
+  gist_question_service:
+    description: "Вопрос связан с %{test_title} от TestGuru"      

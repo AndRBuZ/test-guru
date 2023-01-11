@@ -66,6 +66,11 @@ en:
     test:
       Start: "Start"
 
+  test_passages:
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving gist"
+
   admin:
     tests:
       create:
@@ -88,3 +93,6 @@ en:
         header: "Create new test" 
       edit:
         header: "Edit %{title} test"
+
+  gist_question_service:
+    description: "A question about %{test_title} from TestGuru"

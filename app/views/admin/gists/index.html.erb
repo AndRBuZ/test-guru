@@ -1,0 +1,14 @@
+<div class="conteiner row justify-content-center">
+  <h1>Gists</h1>
+
+  <div class="table table-bordered text-center">
+    <table>
+      <tr class="table-primary">
+        <th><%= t('Question') %></th>
+        <th><%= t('gist_url') %></th>
+        <th><%= t('email_creator') %></th>
+      </tr>
+      <%= render @gists %>
+    </table>
+  </div>
+</div>

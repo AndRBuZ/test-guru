@@ -34,6 +34,14 @@ gem 'rails-i18n', '~> 6.0'
 gem 'jquery-rails'
 gem 'bootstrap', '~> 5.2.3'
 
+# client for GitHubOctokit
+
+gem 'octokit', '~> 5.0'
+
+# gem dotenv
+
+gem 'dotenv-rails', groups: [:development, :test]
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
