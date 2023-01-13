@@ -5,7 +5,7 @@ class User < ApplicationRecord
   has_many :test_passages
   has_many :tests, through: :test_passages, dependent: :destroy
   has_many :test_author, class_name: 'Test', foreign_key: :author_id
-  has_many :gists
+  has_many :gists, dependent: :destroy
 
   EMAIL_FORMAT = /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i.freeze
 

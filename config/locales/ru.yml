@@ -37,9 +37,9 @@ ru:
     test:
       Start: "Начать"
 
-  test_passages:
-    gist:
-      success: "Gist успешно сохранен"
+  gists:
+    create:
+      success: "Gist успешно сохранен %{url}"
       failure: "Во время сохранения gist произошла ошибка"
 
   admin:

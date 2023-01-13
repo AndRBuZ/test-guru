@@ -66,9 +66,9 @@ en:
     test:
       Start: "Start"
 
-  test_passages:
-    gist:
-      success: "Gist was successfully created!"
+  gists:
+    create:
+      success: "Gist was successfully created! %{url}"
       failure: "An error occurred while saving gist"
 
   admin:
