@@ -17,7 +17,7 @@ class GistQuestionService
   end
 
   def gist_struct
-    Struct.new('GistStruct', :url, :success)
+    Struct.new('GistStruct', :url, :success?)
     result = @client.create_gist(gist_params)
     Struct::GistStruct.new(result.html_url, success?)
   end
