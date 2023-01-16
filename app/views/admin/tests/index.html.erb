@@ -3,13 +3,19 @@
 <%= link_to t('.new'), new_admin_test_path %>
 <%= link_to t('.created_gists'), admin_gists_path %>
 
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.number_of_questions') %></th>
-    <th colspan=3><%= t('.actions') %></th>
-  </tr>
+<table class="table table-bordered text-center">
+  <thead class="table-primary border-primary">
+    <tr class="sort-by-title pointer">
+      <th>
+        <%= t('.title') %>
+        <%= octicon 'arrow-up', class: 'text-success hide' %>
+        <%= octicon 'arrow-down', class: 'text-success hide' %>
+      </th>
+      <th><%= t('.level') %></th>
+      <th><%= t('.number_of_questions') %></th>
+      <th colspan=3><%= t('.actions') %></th>
+    </tr>
+  </thead>
 
   <%= render @tests %>
 </table>
