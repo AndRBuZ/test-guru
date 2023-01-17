@@ -35,6 +35,10 @@
 # Ignore dotenv
 .env
 
+# ignore docker
+docker-compose.yml
+Dockerfile
+
 /public/packs
 /public/packs-test
 /node_modules
