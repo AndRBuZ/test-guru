@@ -1,13 +1,13 @@
-document.addEventListener('turbolinks:load', function(){
-  var control = document.querySelector('.sort-by-title')
+document.addEventListener('turbolinks:load', function() { 
+  const control = document.querySelector('.sort-by-title')
 
   if (control) { control.addEventListener('click', sortRowsByTitle) }
 })
 
 function sortRowsByTitle() {
-  var table = document.querySelector('table')
+  const table = document.querySelector('table')
 
-  var rows = [].slice.call(table.querySelector('tbody').getElementsByTagName('tr'))
+  let rows = [].slice.call(table.querySelector('tbody').getElementsByTagName('tr'))
 
   if (this.querySelector('.octicon-arrow-up').classList.contains('hide')) {
     rows = rows.sort(compareRowsAsc)
@@ -19,17 +19,17 @@ function sortRowsByTitle() {
     this.querySelector('.octicon-arrow-up').classList.add('hide')
   }
 
-  var tBody = document.querySelector('tbody')
+  const tBody = document.querySelector('tbody')
   tBody.innerHTML = ''
-  for (var i = 0; i < rows.length; i++) {
+  for (let i = 0; i < rows.length; i++) {
     tBody.appendChild(rows[i])
   }
 
 }
 
 function compareRowsAsc(row1, row2) {
-  var testTitle1 = row1.querySelector('td').textContent
-  var testTitle2 = row2.querySelector('td').textContent
+  let testTitle1 = row1.querySelector('td').textContent
+  let testTitle2 = row2.querySelector('td').textContent
 
   if (testTitle1 < testTitle2) { return -1 }
   if (testTitle1 > testTitle2) { return 1 }
@@ -37,10 +37,10 @@ function compareRowsAsc(row1, row2) {
 }
 
 function compareRowsDesc(row1, row2) {
-    var testTitle1 = row1.querySelector('td').textContent
-    var testTitle2 = row2.querySelector('td').textContent
+  let testTitle1 = row1.querySelector('td').textContent
+  let testTitle2 = row2.querySelector('td').textContent
   
-    if (testTitle1 < testTitle2) { return 1 }
-    if (testTitle1 > testTitle2) { return -1 }
-    return 0
+  if (testTitle1 < testTitle2) { return 1 }
+  if (testTitle1 > testTitle2) { return -1 }
+  return 0
 }

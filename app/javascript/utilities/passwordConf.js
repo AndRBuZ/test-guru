@@ -1,24 +1,34 @@
-document.addEventListener('turbolinks:load', function(){
-  var form = document.querySelector('.new_user')
+document.addEventListener('turbolinks:load', function() {
+  const registration_form = document.getElementById('new_user')
 
-  if (form) { form.addEventListener('input', checkPasswordConfirmation) }
+  if (registration_form) new checkPasswordConfirmation(registration_form)
 })
 
-function checkPasswordConfirmation() {
-  var password = document.getElementById('user_password')
-  var passwordConfirmation = document.getElementById('user_password_confirmation')
+class checkPasswordConfirmation {
+  constructor(form) {
+      this.form = form
+      this.password = form.elements.user_password
+      this.passwordConfirmation = form.elements.user_password_confirmation
 
-  var successIcon = this.querySelector('.octicon-thumbsup')
-  var dangerIcon = this.querySelector('.octicon-thumbsdown')
+      this.event()
+    }
 
-  if (passwordConfirmation.value == "") {
-    successIcon.classList.add('hide')
-    dangerIcon.classList.add('hide') 
-  } else if (passwordConfirmation.value == password.value) {
-    successIcon.classList.remove('hide')
-    dangerIcon.classList.add('hide')
-  } else {
-    successIcon.classList.add('hide')
-    dangerIcon.classList.remove('hide')
+  checkPassword() {
+    const successIcon = this.form.querySelector('.octicon-thumbsup')
+    const dangerIcon = this.form.querySelector('.octicon-thumbsdown')
+    if (this.passwordConfirmation.value == "") {
+      successIcon.classList.add('hide')
+      dangerIcon.classList.add('hide') 
+    } else if (this.passwordConfirmation.value == this.password.value) {
+      successIcon.classList.remove('hide')
+      dangerIcon.classList.add('hide')
+    } else {
+      successIcon.classList.add('hide')
+      dangerIcon.classList.remove('hide')
+    }
+  }
+
+  event() {
+    this.form.addEventListener('input', this.checkPassword.bind(this))
   }
 }
