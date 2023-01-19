@@ -3,6 +3,8 @@
 <%= link_to t('.new'), new_admin_test_path %>
 <%= link_to t('.created_gists'), admin_gists_path %>
 
+<%= render 'shared/errors', resource: @test %>
+
 <table class="table table-bordered text-center">
   <thead class="table-primary border-primary">
     <tr class="sort-by-title pointer">
