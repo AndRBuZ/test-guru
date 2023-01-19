@@ -1,6 +1,14 @@
 <h1>Passing the <%= @test_passage.test.title %> Test</h1>
 
 <p><b><%= @test_passage.current_question.text %></b></p>
+<div class="progressBar">
+  <%= content_tag :div, nil,
+                        class: "progressBar-fill", 
+                        data: {
+                        question_number: @test_passage.current_question_number,
+                        question_count: @test_passage.test.questions.count
+                        } %>
+</div>
 <p>Question #<%= @test_passage.current_question_number %> / <%= @test_passage.test.questions.count %></p>
 
 <%= form_with url: test_passage_path(@test_passage), local: true, method: :put do |form| %>
