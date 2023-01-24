@@ -1,0 +1,13 @@
+<%= form_with method: :post do |form| %>
+  <p>
+    <%= form.label :feedback_message %>
+  </p>
+
+  <p>
+    <%= form.text_field :message %>
+  </p>
+
+  <p>
+    <%= form.submit t('.submit') %>
+  </p>
+<% end %>

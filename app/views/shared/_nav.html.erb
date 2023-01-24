@@ -7,6 +7,9 @@
           <%= link_to 'AdminPanel', admin_tests_path %>
         </button>
       <% end %>
+      <button type="button" class="btn btn-outline-primary">
+        <%= link_to 'Feedback', feedback_index_path %>
+      </button>
       Welcome, <%= current_user.name %> Guru |
       <%= link_to 'Log out', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure?' } %>
     <% else %>

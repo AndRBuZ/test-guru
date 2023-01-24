@@ -98,3 +98,9 @@ en:
 
   gist_question_service:
     description: "A question about %{test_title} from TestGuru"
+
+  feedback:
+    index:
+      header: "Send your feedback"
+    feedback:
+      submit: "Send"
