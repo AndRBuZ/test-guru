@@ -68,4 +68,10 @@ ru:
         submit: "OK"
 
   gist_question_service:
-    description: "Вопрос связан с %{test_title} от TestGuru"      
+    description: "Вопрос связан с %{test_title} от TestGuru"
+
+  feedback:
+    index:
+      header: "Отправте Ваш отзыв"
+    feedback:
+      submit: "Отправить"      

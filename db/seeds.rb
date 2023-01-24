@@ -8,9 +8,9 @@
 
 users = User.create!(
   [
-    { name: 'Jack', email: 'Jack@example.com' },
-    { name: 'Nick', email: 'Nick@example.com' }, 
-    { name: 'John', email: 'Jhon@example.com' }
+    { name: 'Jack', email: 'Jack@example.com', password: 'qwerty' },
+    { name: 'Nick', email: 'Nick@example.com', password: 'qwerty' },
+    { name: 'John', email: 'Jhon@example.com', password: 'qwerty' }
   ]
 )
 
