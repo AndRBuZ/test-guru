@@ -8,6 +8,9 @@
         </button>
       <% end %>
       <button type="button" class="btn btn-outline-primary">
+        <%= link_to 'Badges', badges_path %>
+      </button>
+      <button type="button" class="btn btn-outline-primary">
         <%= link_to 'Feedback', feedback_index_path %>
       </button>
       Welcome, <%= current_user.name %> Guru |
