@@ -15,5 +15,10 @@
     <%= form.collection_select :category_id, Category.all, :id, :title, promt: true %>
   </p>
 
+  <p>
+    <%= form.label :time_in_sec %>
+    <%= form.number_field :time, id: :test_time %>
+  </p>
+
   <p><%= form.submit %></p>
 <% end %>
