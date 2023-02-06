@@ -18,5 +18,10 @@
     <%= form.select :img_name, @img %>
   </p>
 
+  <p>
+    <%= form.label :rule_parameter %>
+    <%= form.number_field :rule_parameter %>
+  </p>
+
   <p><%= form.submit %></p>
 <% end %>
