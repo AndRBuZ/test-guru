@@ -5,6 +5,7 @@ document.addEventListener('turbolinks:load', function () {
   if (getTimer) { setInterval(timeCount, 1000) }
 
   let time = getTimer.dataset.timer
+  let form = document.querySelector('form')
 
   function timeCount() {
     if (time > 60) {
@@ -12,7 +13,7 @@ document.addEventListener('turbolinks:load', function () {
     } else if (time < 60 && time > 0) {
       getTimer.innerHTML = 'Time left ' + Math.round(time) + 'sec'
     } else if (time <= 0) {
-      window.location.href = window.location.href + '/result'
+      form.submit()
     }
     time--
   }

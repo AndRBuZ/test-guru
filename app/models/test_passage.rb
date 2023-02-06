@@ -28,6 +28,10 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id < ?', current_question.id).size + 1
   end
 
+  def time_is_over?
+    (created_at + self.test.time) - Time.now <= 0
+  end
+
   private
 
   def before_validation_set_current_qustion
