@@ -1,6 +1,6 @@
 <h1>Passing the <%= @test_passage.test.title %> Test</h1>
 
-<div class="timer" data-timer = "<%= @test_passage.test.time %>"></div>
+<div class="timer" data-timer = "<%= @test_passage.get_time %>"></div>
 
 <p><b><%= @test_passage.current_question.text %></b></p>
 <div class="progressBar">

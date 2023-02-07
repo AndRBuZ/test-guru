@@ -8,7 +8,7 @@ class TestPassage < ApplicationRecord
   SUCCESS_RATIO = 85
 
   def complited?
-    current_question.nil?
+    current_question.nil? || (created_at + self.test.time) - Time.zone.now <= 0
   end
 
   def accept!(answer_ids)
@@ -28,8 +28,8 @@ class TestPassage < ApplicationRecord
     test.questions.order(:id).where('id < ?', current_question.id).size + 1
   end
 
-  def time_is_over?
-    (created_at + self.test.time) - Time.now <= 0
+  def get_time
+    (created_at + self.test.time) - Time.zone.now
   end
 
   private
