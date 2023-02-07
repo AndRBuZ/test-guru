@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-9">Badges</div>
+    <div class="col-4">Received<br>
+      <% @user_badges.each do |image| %>
+        <%= image_tag("badges/#{image}", size: "50") %>
+      <% end %>
+    </div>
+    <div class="col-5">All<br>
+      <% @badges.each do |image| %>
+        <%= image_tag("badges/#{image}", size: "50") %>
+      <% end %>
+    </div>
+  </div>
+</div>
